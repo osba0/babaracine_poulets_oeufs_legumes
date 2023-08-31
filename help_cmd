@@ -1,0 +1,61 @@
+composer create-project --prefer-dist laravel/laravel babaracine
+composer require livewire/livewire
+composer require laravel/JetStream
+php artisan jetstream:install livewire
+php artisan make:middleware AuthAdmin
+
+in vendor/laravel/fortify/src/Actions/AttemptToAuthenticate 
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
+...
+
+ public function handle($request, $next)
+    {
+        if (Fortify::$authenticateUsingCallback) {
+            return $this->handleUsingCustomCallback($request, $next);
+        }
+
+        if ($this->guard->attempt(
+            $request->only(Fortify::username(), 'password'),
+            $request->boolean('remember'))
+        ) {
+            if(Auth::user()->utype === 'ADM'){
+
+                session(['utype' => 'ADM']);
+
+                return redirect(RouteServiceProvider::HOME); 
+                
+            }elseif(Auth::user()->utype === 'USR'){
+
+                session(['utype' => 'USR']);
+
+                return redirect(RouteServiceProvider::HOME); 
+            }
+
+            return $next($request);
+        }
+
+        $this->throwFailedAuthenticationException($request);
+    }
+
+php artisan make:model Category -m 
+
+php artisan make:model Product -m 
+
+php artisan make:factory CategoryFactory --model=Category
+
+php artisan make:factory ProductFactory --model=Product
+
+composer require hardevine/shoppingcart (https://packagist.org/packages/hardevine/shoppingcart)
+
+php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config" 
+
+
+php artisan make:model Coupon -m 
+
+
+https://cartalyst.com/manual/stripe-laravel/15.x
+a mettre dans composer.json 
+"cartalyst/stripe-laravel": "^15.0"
+et run composer update
