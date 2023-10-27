@@ -3,6 +3,9 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use App\Models\Order;
+
+
 
 class AdminOrderDetailsComponent extends Component
 {

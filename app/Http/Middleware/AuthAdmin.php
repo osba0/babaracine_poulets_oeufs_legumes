@@ -21,6 +21,8 @@ class AuthAdmin
             
             return $next($request);
 
+        }elseif(Auth::user()->utype === 'USR'){
+             return redirect('/');
         }else{
             session()->flush();
 

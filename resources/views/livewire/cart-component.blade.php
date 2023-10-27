@@ -5,8 +5,8 @@
 
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="/" class="link">home</a></li>
-                <li class="item-link"><span>Cart</span></li>
+                <li class="item-link"><a href="/" class="link">Accueil</a></li>
+                <li class="item-link"><span>Panier</span></li>
             </ul>
         </div>
         <div class=" main-content-area">
@@ -94,7 +94,7 @@
                             </form>
                         </div>
                     @endif
-                    <a class="btn btn-checkout" href="#" wire:click.prevent="checkout">Check out</a>
+                    <a class="btn btn-checkout" href="#" wire:click.prevent="checkout">Commander</a>
                     <a class="link-to-shop" href="/product-category/poulet">Continuer vos achats<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                  @endif

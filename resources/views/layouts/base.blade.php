@@ -91,6 +91,9 @@
 																<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 															</li>
 															<li class="menu-item" >
+																<a title="Orders" href="{{ route('admin.orders') }}">Orders</a>
+															</li>
+															<li class="menu-item" >
 																<a title="Catégories" href="{{ route('admin.categories') }}">Catégories</a>
 															</li>
 															<li class="menu-item" >
@@ -114,6 +117,9 @@
 														<ul class="submenu curency" >
 															<li class="menu-item" >
 																<a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+															</li>
+															<li class="menu-item" >
+																<a title="Orders" href="{{ route('user.orders') }}">My Orders</a>
 															</li>
 															<li class="menu-item" >
 																<a title="Dashboard" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-Form').submit()" >Se déconnecter</a>
