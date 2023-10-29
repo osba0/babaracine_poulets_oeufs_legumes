@@ -21,7 +21,8 @@ class CategoryFactory extends Factory
 
         return [
             'name' => $category_name,
-            'slug' => $slug
+            'slug' => $slug,
+            'sort' => 1
         ];
     }
 }
