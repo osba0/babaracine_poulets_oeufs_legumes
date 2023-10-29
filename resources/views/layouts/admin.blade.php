@@ -7,6 +7,7 @@
 		<link rel="shortcut icon" type="image/png" href="{{ asset('admin/assets/images/logos/favicon.png') }}" />
 		<link rel="stylesheet" href="{{ asset('admin/assets/css/styles.min.css') }}" />
 		<link rel="stylesheet" href="{{ asset('admin/assets/css/styles.css') }}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.min.css" />
     </head>
     <body class="font-sans antialiased">
           <!--  Body Wrapper -->
@@ -110,6 +111,9 @@
 		<script src="{{asset('admin/assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
 		<script src="{{asset('admin/assets/libs/simplebar/dist/simplebar.js')}}"></script>
 		<script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.min.js"></script>
+	<script src="{{ asset('assets/js/functions.js') }}"></script>
 
         @livewireScripts
     </body>

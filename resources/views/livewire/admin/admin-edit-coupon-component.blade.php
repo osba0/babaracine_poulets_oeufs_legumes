@@ -1,18 +1,18 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card">
+                <div class="card-header">
                     <div class="row">
                         <div class="col-md-6">
-                            <span>Edit Coupon</span>
+                            <h3>Edit Coupon</h3>
                         </div>
                         <div class="col-md-6 text-right">
                             <a href="{{ route('admin.categories') }}" class="btn btn-primary">All coupons</a>
                         </div>
                     </div>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                       @if(Session::has('success_message'))
                         <div class="alert alert-success">
                             <strong>Succés {{ Session::get('success_message') }}</strong>

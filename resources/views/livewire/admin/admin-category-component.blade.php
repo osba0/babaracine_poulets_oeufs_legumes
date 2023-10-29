@@ -2,10 +2,10 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-body">
+                <div class="card-header">
                    <div class="row">
                         <div class="col-md-6">
-                             <h5 class="card-title fw-semibold mb-0">Toutes les catégories</h5>
+                             <h3 class="fw-semibold mb-0">Toutes les catégories</h3>
                         </div>
                         <div class="col-md-6 text-end">
                             <a href="{{ route('admin.addcategory') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Nouvelle Categorie</a>
@@ -46,12 +46,14 @@
                                 <td>{{ $category->sort }}</td>
                                 <td><img src="{{ asset('assets/category/'.$category->picture)}}" style="height: 40px"/></td>
                                 <td class="text-end">
-                                    <a class="btn btn-warning" href="{{ route('admin.editcategory', ['category_slug'=> $category->slug]) }}">
-                                        Edit
-                                    </a>
-                                     <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteCategory({{$category->id}})">
-                                        Supprimer
-                                    </a>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <a class="btn btn-warning me-2" href="{{ route('admin.editcategory', ['category_slug'=> $category->slug]) }}">
+                                            Edit
+                                        </a>
+                                         <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteCategory({{$category->id}})">
+                                            Supprimer
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

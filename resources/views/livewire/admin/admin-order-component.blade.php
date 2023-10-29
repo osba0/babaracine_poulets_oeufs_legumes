@@ -5,7 +5,7 @@
                 <div class="panel-body">
                    <div class="row">
                         <div class="col-md-6">
-                            <h5 class="panel-title fw-semibold mb-0">Liste des Commandes</h5>
+                            <h3 class="fw-semibold mb-3">Liste des Commandes</h3>
                         </div>
                         <div class="col-md-6 text-end">
                             

@@ -21,6 +21,10 @@
 	border-radius: 0;
 }
 
+.form-group{
+	margin-bottom: 15px;
+}
+
 .nav-small-cap {
   color: #fff;
 }

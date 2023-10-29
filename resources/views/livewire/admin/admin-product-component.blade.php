@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-body">
+                <div class="card-header">
                    <div class="row">
                         <div class="col-md-6">
-                            <h5 class="card-title fw-semibold mb-0">Tous les Prouits</h5>
+                            <h3 class="fw-semibold mb-0">Tous les Produits</h3>
                         </div>
                         <div class="col-md-6 text-end">
-                            <a href="{{ route('admin.addproduct') }}" class="btn btn-danger"><i class="fa fa-plus"></i> NouveauProduit</a>
+                            <a href="{{ route('admin.addproduct') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Nouveau Produit</a>
                         </div>
                     </div>
                 </div>
@@ -51,12 +51,14 @@
                                 </td>
                                 <td class="align-middle">{{ $product->created_at }}</td>
                                 <td class="text-end align-middle">
-                                    <a class="btn btn-warning" href="{{ route('admin.editproduct', ['product_slug'=> $product->slug]) }}">
-                                        Editer
-                                    </a>
-                                     <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteProduct({{$product->id}})">
-                                        Supprimer
-                                    </a>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <a class="btn btn-warning me-2" href="{{ route('admin.editproduct', ['product_slug'=> $product->slug]) }}">
+                                            Editer
+                                        </a>
+                                         <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteProduct({{$product->id}})">
+                                            Supprimer
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

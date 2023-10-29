@@ -1,3 +1,8 @@
-<div>
-    <h1>Admin Dashboard</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Admin Dashboard</h3>
+            <p>Under construction</p>
+        </div>
+    </div>
 </div>
