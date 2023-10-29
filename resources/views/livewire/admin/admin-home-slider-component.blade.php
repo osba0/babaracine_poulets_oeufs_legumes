@@ -50,12 +50,14 @@
                                 </td>
                                 <td>{{ $slider->created_at }}</td>
                                 <td class="text-right">
-                                    <a class="btn btn-warning" href="{{ route('admin.edithomeslider', ['slide_id'=> $slider->id]) }}">
-                                        Editer
-                                    </a>
-                                     <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteSlide({{$slider->id}})">
-                                        Supprimer
-                                    </a>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <a class="btn btn-warning me-2" href="{{ route('admin.edithomeslider', ['slide_id'=> $slider->id]) }}">
+                                            Editer
+                                        </a>
+                                         <a onclick="confirm('Etes-vous sûre de bien vouloir supprimer?') || event.stopImmediatePropagation()" class="btn btn-danger cursor-pointer" wire:click.prevent="deleteSlide({{$slider->id}})">
+                                            Supprimer
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
