@@ -77,8 +77,8 @@
                     <div class="advance-info">
                         <div class="tab-control normal">
                             <a href="#description" class="tab-control-item active">Description</a>
-                            <a href="#add_infomation" class="tab-control-item">Infomations Supplémentaires</a>
-                            <a href="#review" class="tab-control-item">Evaluation</a>
+                            <!--a href="#add_infomation" class="tab-control-item">Infomations Supplémentaires</a-->
+                            <!--a href="#review" class="tab-control-item">Evaluation</a-->
                         </div>
                         <div class="tab-contents">
                             <div class="tab-content-item active" id="description">
