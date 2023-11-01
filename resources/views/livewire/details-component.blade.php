@@ -83,9 +83,9 @@
                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">Acheter</a>
                         </div>
 
-                        <div class="wrap-social">
+                        <!--div class="wrap-social">
                             <a class="link-socail" href="#"><img src="{{ asset('assets/images/social-list.png') }}" alt=""></a>
-                        </div>
+                        </div-->
                     </div>
                     <div class="advance-info">
                         <div class="tab-control normal">
@@ -202,8 +202,8 @@
                                 <a class="link-to-service" href="#">
                                     <i class="fa fa-truck" aria-hidden="true"></i>
                                     <div class="right-content">
-                                        <b class="title">Free Shipping</b>
-                                        <span class="subtitle">On Oder Over $99</span>
+                                        <b class="title">Livraison gratuit</b>
+                                        <span class="subtitle">Achat supérieur à 50.000 FCFA</span>
                                         <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
                                     </div>
                                 </a>
@@ -234,7 +234,7 @@
                     </div>
                 </div><!-- Categories widget-->
 
-                <div class="widget mercado-widget widget-product">
+                <div class="widget mercado-widget widget-product" style="display: none"> <!--A decommeter au besoin-->
                     <h2 class="widget-title">Popular Products</h2>
                     <div class="widget-content">
                         <ul class="products">
@@ -259,7 +259,7 @@
 
             </div><!--end sitebar-->
 
-            <div class="single-advance-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="single-advance-box col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none"> <!--A decommeter au besoin-->
                 <div class="wrap-show-advance-info-box style-1 box-in-site">
                     <h3 class="title-box">Related Products</h3>
                     <div class="wrap-products">
