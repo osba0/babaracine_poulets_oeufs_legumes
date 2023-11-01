@@ -81,17 +81,20 @@
 		                    </a>
 		                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
 		                      <i class="ti ti-mail fs-6"></i>
-		                      <p class="mb-0 fs-3">My Account</p>
+		                      <p class="mb-0 fs-3">Mon Compte</p>
 		                    </a>
 		                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
 		                      <i class="ti ti-list-check fs-6"></i>
-		                      <p class="mb-0 fs-3">My Task</p>
+		                      <p class="mb-0 fs-3">Modifier mot de passe</p>
 		                    </a>
 
-		                    <a title="Logout" href="{{ route('logout') }}" class="btn btn-outline-primary mx-3 mt-2 d-block" onclick="event.preventDefault(); document.getElementById('logout-Form').submit()" >Logout</a>
+		                    <a title="Déconnexion" href="{{ route('logout') }}" class="btn btn-outline-primary mx-3 mt-2 d-block" onclick="event.preventDefault(); document.getElementById('logout-Form').submit()" >Déconnexion</a>
 		                  </div>
 		                  <form id="logout-Form" action="{{ route('logout') }}" method="POST">@csrf</form>
 		                </div>
+		              </li>
+		              <li>
+		              	<a title="Déconnexion" href="{{ route('logout') }}" class="btn btn-outline-danger mx-3 mt-2 d-block" onclick="event.preventDefault(); document.getElementById('logout-Form').submit()" >Déconnexion</a>
 		              </li>
 		            </ul>
 		          </div>
