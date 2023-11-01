@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReviewsTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->integer('rating');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
             $table->text('comment');
-            $table->bigInteger('order_item_id')->unsigned();
             $table->timestamps();
-            $table->foreign("order_item_id")->references("id")->on("order_items")->onDelete("cascade");
         });
     }
 
@@ -30,6 +30,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('contacts');
     }
 }

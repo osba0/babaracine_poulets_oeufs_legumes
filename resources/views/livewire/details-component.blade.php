@@ -25,12 +25,26 @@
                     </div>
                     <div class="detail-info">
                         <div class="product-rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <a href="#" class="count-review">(05 review)</a>
+                            @php
+                                $avgrating = 0;
+                            @endphp
+                            
+                            @if($product->orderItems) // A Enlever voir video  https://www.youtube.com/watch?v=tIZvDxbzO0k&list=PLz_YkiqIHesvPtvLl2Wz5FtuW44dBt199&index=50 
+                                @foreach($product->orderItems->where('rstatus', 1) as $orderItem) 
+                                    @php
+                                        $avgrating = $avgrating + $orderItem->review->rating;
+                                    @endphp
+                                @endforeach 
+                                @for($i=1; $i<=5;$i++)
+                                    @if($i<= $avgrating)
+                                        
+                                    @else
+                                       
+                                    @endif
+                                @endfor
+                              
+                                <a href="#" class="count-review">({{$product->orderItems->where('rstatus', 1)->count()}} review)</a>
+                             @endif
                         </div>
                         <h2 class="product-name">{{ $product->name }}</h2>
                         <div class="short-desc">

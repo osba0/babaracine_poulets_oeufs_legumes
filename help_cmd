@@ -62,3 +62,6 @@ et run composer update
 
 
 php artisan make:migration add_delivered_canceled_date_to_orders_table --table=orders
+
+
+php artisan make:migration add_rstatus_to_order_items_table --table=order_items

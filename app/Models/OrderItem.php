@@ -12,10 +12,20 @@ class OrderItem extends Model
     protected $table = "order_items";
 
     public function order(){
+
         return $this->belongsTo(Order::Class);
+
     }
 
     public function product(){
+
         return $this->belongsTo(Product::class);
+
+    }
+
+    public function review(){
+
+        return $this->hasOne(Review::class, 'order_item_id');
+
     }
 }  
