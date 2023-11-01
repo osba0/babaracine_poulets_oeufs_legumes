@@ -38,7 +38,7 @@
                             <label class="col-md-4 control-label">Description <span class="text-danger">*</span></label>
                             <div class="col-md-7" wire:ignore>
                                 <input id="description" type="hidden" name="content" value="">
-                                <!--trix-editor wire:ignore input="description"></trix-editor-->
+                                <trix-editor wire:ignore input="description"></trix-editor>
                                 <!--textarea class="form-control" id="description" placeholder="Description" wire:model="description"></textarea-->
                                 @error('description') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
@@ -116,6 +116,18 @@
                                 @error('image') <span class="text-danger">{{ $message }}</span> @enderror
                                 @if($image)
                                 <img src="{{ $image->temporaryUrl()}}" style="height: 60px"/>
+                                @endif
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Autres images </label>
+                            <div class="col-md-4">
+                                <input type="file" wire:model="images" multiple>
+                               
+                                @if($images)
+                                    @foreach($images as $image)
+                                    <img src="{{ $image->temporaryUrl()}}" style="height: 60px"/>
+                                    @endforeach
                                 @endif
                             </div>
                         </div>
