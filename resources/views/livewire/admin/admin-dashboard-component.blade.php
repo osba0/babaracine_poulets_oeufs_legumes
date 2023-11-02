@@ -17,7 +17,7 @@
     }
     .icon-stat-value {
         display: block;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
     }
     .icon-stat-visual {
